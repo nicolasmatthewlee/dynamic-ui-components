@@ -11,6 +11,10 @@ const displayDesktop = () => {
   header.style.padding = '30px 0px 30px 30px';
   body.append(header);
 
+  let implementationLabel = document.createElement('div');
+  implementationLabel.textContent = 'desktop';
+  body.append(implementationLabel);
+
   header.append(
     DropDownMenu(
       ['Products', 'Pricing', 'Developers', 'About'],

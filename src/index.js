@@ -20,7 +20,7 @@ window.mobileCheck = function () {
   return check;
 };
 
-if (window.mobileCheck() == true) {
+if (window.mobileCheck(navigator.userAgent) == true) {
   displayMobile();
 } else {
   displayDesktop();
