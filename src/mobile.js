@@ -1,6 +1,6 @@
 import './reset.css';
 
-import { DropDownMenu } from './mobile-drop-down-menu.js';
+import { DropDownMenu } from './drop-down-menu.js';
 
 const displayMobile = () => {
   const body = document.querySelector(':root');
@@ -19,10 +19,10 @@ const displayMobile = () => {
   let sizeLabel = document.createElement('div');
   body.append(sizeLabel);
 
-  body.style.setProperty('--innerHeight', window.innerHeight);
+  body.style.setProperty('--innerHeight', window.innerHeight + 'px');
   window.addEventListener('resize', () => {
     sizeLabel.textContent = window.innerHeight;
-    body.style.setProperty('--innerHeight', window.innerHeight);
+    body.style.setProperty('--innerHeight', window.innerHeight + 'px');
   });
 
   header.append(

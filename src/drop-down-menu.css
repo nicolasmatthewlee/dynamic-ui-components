@@ -58,28 +58,30 @@
 .drop-down-menu>.menu-overlay {
     position: absolute;
     left: 0px;
-    bottom: 100vh;
     z-index: 1;
 
-    height: 100vh;
+    height: var(--innerHeight);
     width: 100vw;
 
     display: flex;
     gap: 20px;
 
-    translate: 0px 0px;
-    transition: translate 300ms ease-in-out;
+    top: calc(-1*var(--innerHeight));
+    transition: top 300ms ease-in-out, opacity 0ms linear 300ms;
 
     background-color: white;
 
     overflow: hidden;
+    opacity: 0;
 }
 
 .drop-down-menu>.menu-overlay.active {
     visibility: visible;
 
-    translate: 0px 100vh;
-    transition: translate 300ms ease-in-out;
+    top: 0px;
+    transition: top 300ms ease-in-out;
+
+    opacity: 1;
 }
 
 /* hide-menu */

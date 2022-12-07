@@ -15,6 +15,16 @@ const displayDesktop = () => {
   implementationLabel.textContent = 'desktop';
   body.append(implementationLabel);
 
+  // show window.innerHeight and adjust css variable
+  let sizeLabel = document.createElement('div');
+  body.append(sizeLabel);
+
+  body.style.setProperty('--innerHeight', window.innerHeight + 'px');
+  window.addEventListener('resize', () => {
+    sizeLabel.textContent = window.innerHeight;
+    body.style.setProperty('--innerHeight', window.innerHeight + 'px');
+  });
+
   header.append(
     DropDownMenu(
       ['Products', 'Pricing', 'Developers', 'About'],
