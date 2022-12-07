@@ -138,6 +138,7 @@
 
 .drop-down-menu>.menu-overlay>.sections-container>.section-backdrop {
     height: 50px;
+    min-height: 50px;
 
     text-align: left;
     font-size: 30px;
