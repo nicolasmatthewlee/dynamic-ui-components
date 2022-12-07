@@ -59,8 +59,12 @@ const DropDownMenu = (sections) => {
   const sectionsContainer = createElement('div', 'sections-container');
 
   for (let name of sections) {
-    let section = createElement('div', 'section', name);
-    sectionsContainer.append(section);
+    let sectionBackdrop = createElement('div', 'section-backdrop');
+    let sectionTitleContainer = createElement('div', 'section-title-container');
+    let sectionTitle = createElement('div', 'section-title', name);
+    sectionBackdrop.append(sectionTitleContainer);
+    sectionTitleContainer.append(sectionTitle);
+    sectionsContainer.append(sectionBackdrop);
   }
 
   menuOverlay.append(sectionsContainer);
