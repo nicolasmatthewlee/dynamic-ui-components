@@ -5,15 +5,6 @@ import './reset.css';
 
 import { DropDownMenu } from './drop-down-menu.js';
 
-// for mobile – set body.height to height of inner browser
-function resetHeight() {
-  document.body.height = window.innerHeight + 'px';
-}
-// resets height on window resize
-window.addEventListener('resize', resetHeight);
-// initial call
-resetHeight();
-
 const body = document.querySelector(':root');
 
 let header = document.createElement('div');
