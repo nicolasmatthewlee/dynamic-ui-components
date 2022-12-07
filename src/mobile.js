@@ -12,16 +12,16 @@ const displayMobile = () => {
   body.append(header);
 
   let implementationLabel = document.createElement('div');
-  implementationLabel.textContent = 'mobile';
+  implementationLabel.textContent = '(viewing from mobile)';
+  implementationLabel.style.fontFamily =
+    "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+  implementationLabel.style.fontWeight = '600';
+  implementationLabel.style.paddingLeft = '30px';
   body.append(implementationLabel);
 
-  // show window.innerHeight and adjust css variable
-  let sizeLabel = document.createElement('div');
-  body.append(sizeLabel);
-
+  // set --innerHeight on height change
   body.style.setProperty('--innerHeight', window.innerHeight + 'px');
   window.addEventListener('resize', () => {
-    sizeLabel.textContent = window.innerHeight;
     body.style.setProperty('--innerHeight', window.innerHeight + 'px');
   });
 
