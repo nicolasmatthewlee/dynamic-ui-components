@@ -3,6 +3,7 @@ import './drop-down-menu.css';
 import EXPAND_MORE_ICON from './assets/expand-more.svg';
 import EXPAND_LESS_ICON from './assets/expand-less.svg';
 
+// helper method
 const createElement = (type, className, content = '') => {
   let element = document.createElement(type);
   element.setAttribute('class', className);
@@ -14,7 +15,10 @@ const createElement = (type, className, content = '') => {
   return element;
 };
 
-const DropDownMenu = (sections) => {
+const DropDownMenu = (sections, functions = []) => {
+  //   takes in a list of section names and an optional list
+  //   of functions to be called when the section is clicked
+
   const menu = createElement('div', 'drop-down-menu');
 
   //   show menu
@@ -58,14 +62,18 @@ const DropDownMenu = (sections) => {
   // menu content
   const sectionsContainer = createElement('div', 'sections-container');
 
-  for (let name of sections) {
+  sections.forEach((name, index) => {
     let sectionBackdrop = createElement('div', 'section-backdrop');
     let sectionTitleContainer = createElement('div', 'section-title-container');
     let sectionTitle = createElement('div', 'section-title', name);
     sectionBackdrop.append(sectionTitleContainer);
     sectionTitleContainer.append(sectionTitle);
     sectionsContainer.append(sectionBackdrop);
-  }
+
+    if (functions[index]) {
+      sectionBackdrop.addEventListener('click', functions[index]);
+    }
+  });
 
   menuOverlay.append(sectionsContainer);
 
