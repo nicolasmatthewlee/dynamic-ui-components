@@ -24,27 +24,3 @@ header.append(
     ]
   )
 );
-
-header.append(
-  DropDownMenu(
-    ['Products', 'Pricing', 'Developers', 'About'],
-    [
-      () => console.log('products'),
-      () => console.log('pricing'),
-      () => console.log('developers'),
-      () => console.log('about')
-    ]
-  )
-);
-
-header.append(
-  DropDownMenu(
-    ['Products', 'Pricing', 'Developers', 'About'],
-    [
-      () => console.log('products'),
-      () => console.log('pricing'),
-      () => console.log('developers'),
-      () => console.log('about')
-    ]
-  )
-);
