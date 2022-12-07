@@ -16,6 +16,10 @@ const createElement = (type, className, content = '') => {
 const DropDownMenu = (sections) => {
   const menu = createElement('div', 'drop-down-menu');
 
+  const showMenuContainerBackdrop = createElement(
+    'div',
+    'show-menu-container-backdrop'
+  );
   const showMenuContainer = createElement('button', 'show-menu-container');
   showMenuContainer.addEventListener('click', () => {
     sectionsContainer.classList.toggle('active');
@@ -23,6 +27,7 @@ const DropDownMenu = (sections) => {
   const menuLabel = createElement('div', 'show-menu-label', 'Menu');
   const showMenuButton = createElement('img', 'show-menu-icon', DROP_DOWN_ICON);
   showMenuContainer.append(menuLabel, showMenuButton);
+  showMenuContainerBackdrop.append(showMenuContainer);
 
   const sectionsContainer = createElement('div', 'sections-container');
 
@@ -31,7 +36,7 @@ const DropDownMenu = (sections) => {
     sectionsContainer.append(section);
   }
 
-  menu.append(showMenuContainer, sectionsContainer);
+  menu.append(showMenuContainerBackdrop, sectionsContainer);
 
   return menu;
 };
