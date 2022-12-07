@@ -10,7 +10,6 @@ const body = document.querySelector(':root');
 let header = document.createElement('div');
 header.style.display = 'flex';
 header.style.gap = '30px';
-header.style.backgroundColor = 'red';
 header.style.padding = '30px 0px 30px 30px';
 body.append(header);
 
