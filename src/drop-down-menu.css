@@ -1,8 +1,5 @@
 .drop-down-menu {
-    height: 50px;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 56px;
 
     font-size: 24px;
     font-weight: 500;
@@ -13,9 +10,7 @@
 /* show-menu-button */
 
 .drop-down-menu>.show-menu-container-backdrop {
-    position: absolute;
-    right: 10px;
-
+    position: relative;
     height: 50px;
     width: 130px;
     border: 3px solid black;
@@ -96,8 +91,8 @@
 
 .drop-down-menu>.menu-overlay>.hide-menu-container {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 30px;
 
     height: 56px;
     width: 56px;
@@ -141,7 +136,7 @@
     flex-direction: column;
 
     gap: 20px;
-    padding: 20px 0px 0px 20px;
+    padding: 30px 0px 0px 30px;
 
     abackground-color: orange;
 }
