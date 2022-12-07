@@ -22,15 +22,10 @@
 
     background-color: white;
     border: 0px;
-
-    transition: scale 300ms;
 }
 
 .drop-down-menu>.show-menu-container:hover {
     cursor: pointer;
-
-    scale: 1.05;
-    transition: scale 300ms;
 }
 
 .drop-down-menu>.show-menu-container:hover>* {
